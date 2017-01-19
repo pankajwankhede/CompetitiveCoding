@@ -42,10 +42,33 @@ public class ReducedString {
 			return s;
 		}
 	}
+
+	public static String reduceStringUsingStack(String s){
+		Stack<Character> uniqueChars=new Stack<Character>();
+		String output="";
+		for(int i=0;i<s.length();i++){
+			for(int j=0;j<uniqueChars.size();j++){
+			System.out.println(uniqueChars.get(j));
+			}
+			if(uniqueChars.empty())
+				uniqueChars.push(s.charAt(i));
+			else{
+				if(uniqueChars.peek()==s.charAt(i))
+					uniqueChars.pop();
+				else
+					uniqueChars.push(s.charAt(i));	
+			}
+		}
+		for(int i=0;i<uniqueChars.size();i++){
+			output=output+uniqueChars.get(i);
+		}
+		return output;
+	}
     public static void main(String[] args) {
     	Scanner in=new Scanner(System.in);
     	String inputString=in.next();
-    	String output=reduceString(inputString);
-    	System.out.println((output.length()==0)?"Empty String":output);
+    	// String output=reduceString(inputString);
+    	String output=reduceStringUsingStack(inputString);
+    	System.out.println((output.length()==0)?"Empty String":"o>"+output);
     }
 }
