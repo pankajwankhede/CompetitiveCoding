@@ -43,6 +43,7 @@ public class Prob1 {
 		System.out.println(isUniqueChars(inputString)?"YES":"NO");
 		System.out.println("Second Function");
 		System.out.println(isUniqueCharsBool(inputString)?"YES":"NO");
+	
 
 	}
 

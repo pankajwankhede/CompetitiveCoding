@@ -47,9 +47,7 @@ public class ReducedString {
 		Stack<Character> uniqueChars=new Stack<Character>();
 		String output="";
 		for(int i=0;i<s.length();i++){
-			for(int j=0;j<uniqueChars.size();j++){
-			System.out.println(uniqueChars.get(j));
-			}
+			
 			if(uniqueChars.empty())
 				uniqueChars.push(s.charAt(i));
 			else{
@@ -69,6 +67,6 @@ public class ReducedString {
     	String inputString=in.next();
     	// String output=reduceString(inputString);
     	String output=reduceStringUsingStack(inputString);
-    	System.out.println((output.length()==0)?"Empty String":"o>"+output);
+    	System.out.println((output.length()==0)?"Empty String":output);
     }
 }
