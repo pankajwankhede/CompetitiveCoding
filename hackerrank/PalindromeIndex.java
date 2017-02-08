@@ -31,25 +31,22 @@ public class PalindromeIndex {
 		if(isPalindrome(s))
 			return -1;
 		else{
-			for(int i=0;i<=N/2;i++){
-			if(s.charAt(i)!=s.charAt(N-i-1)){
-				if(i==0){
-					if(isPalindrome(s.substring(i+1,N))){
-						return i;
-					}
-						
-					else if(isPalindrome(s.substring(0,N-1))){
-						return N-i-1;
-					}
-				}else{
-					if(isPalindrome(s.substring(0,i-1)+s.substring(i+1,N-1)))
-						return i;
-					else
-						return N-i-1;
-				}	
-			}
+			for(int i=0;i<N/2;i++){
+				if(s.charAt(i)!=s.charAt(N-i-1)){
 					
-				
+					if(i>0){
+						
+						if((isPalindrome(s.substring(0,i).concat(s.substring(i+1)))))
+							return i;
+						else
+							return N-i-1;
+					}else if(i==0){
+						if((isPalindrome(s.substring(i+1))))
+							return i;
+						else
+							return N-i-1;
+					}
+				}				
 			}
 			
 		}
@@ -63,6 +60,7 @@ public class PalindromeIndex {
         int T=in.nextInt();
         for(int i=0;i<T;i++){
         	String s=in.next();
+        	System.out.println(isPalindrome(s));
         	System.out.println(findPalindromicIndex(s));
         }
     }
