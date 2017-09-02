@@ -4,7 +4,9 @@ import java.text.*;
 import java.math.*;
 import java.util.regex.*;
 
-/*Problem URL: https://www.hackerrank.com/contests/hourrank-17/challenges/the-hurdle-race*/
+/*Problem URL: https://www.hackerrank.com/contests/hourrank-17/challenges/the-hurdle-race
+https://www.hackerrank.com/challenges/the-hurdle-race
+*/
 public class HurdleRace {
 
     public static void main(String[] args) {
