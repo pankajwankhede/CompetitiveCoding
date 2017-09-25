@@ -1,5 +1,7 @@
 import java.util.*;
 
+/*Problem URL: http://www.geeksforgeeks.org/check-two-unsorted-array-duplicates-allowed-elements/*/
+
 public  class ArrayDuplicate{
 	public static boolean findIfContainsDuplicate(int[] a,int[] b,int n){
 		int[] hashingArray=new int[128];
